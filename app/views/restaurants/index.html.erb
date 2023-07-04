@@ -4,7 +4,10 @@
   <hr>
   <div id="restaurants">
     <% @restaurants.each do |restaurant| %>
-        <%= render restaurant %>
+        <div><%= restaurant.name %></div>
+        <div><%= restaurant.address %></div>
+        <div><%= restaurant.category %></div>
+        <hr>
     <% end %>
   </div>
 </div>
