@@ -1,0 +1,10 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+  <h1>Restaurants</h1>
+  <hr>
+  <div id="restaurants">
+    <% @restaurants.each do |restaurant| %>
+        <%= render restaurant %>
+    <% end %>
+  </div>
+</div>
