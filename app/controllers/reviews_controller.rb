@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-before_acction :set_restaurant, only: [:new, :create]
+before_action :set_restaurant, only: [:new, :create]
 
 def new
   @review = Review.new
@@ -24,7 +24,7 @@ end
   private
 
   def set_restaurant
-    @restaurant = Restaurant.find(params[:restaurant_id])
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def review_params

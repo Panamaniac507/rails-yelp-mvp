@@ -4,12 +4,12 @@
 
 
 <p><strong>Reviews</strong></p>
-<p><%=  link_to "add review", new_restaurant_review_path(@restaurant)%></p>
+<p><%=  link_to "add review", new_review_path(@restaurant)%></p>
 <ul class="list-group">
   <% @restaurant.reviews.each do |review| %>
     <li class="list-group-item">
-    <%= review.content %>
-</li>
+    <%= @review.content %>
+    </li>
 
     </li>
   <% end %>
