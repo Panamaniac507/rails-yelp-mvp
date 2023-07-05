@@ -1,17 +1,19 @@
+<div class="container">
+
 <p style="color: green"><%= notice %></p>
 
 <%= render @restaurant %>
 
 
 <p><strong>Reviews</strong></p>
-<p><%=  link_to "add review", new_review_path(@restaurant)%></p>
+<p><%=  link_to "add review", new_restaurant_review_path(@restaurant)%></p>
 <ul class="list-group">
   <% @restaurant.reviews.each do |review| %>
     <li class="list-group-item">
     <%= @review.content %>
     </li>
-
     </li>
+    <hr>
   <% end %>
 </ul>
 <br>
@@ -19,4 +21,5 @@
 
 <div>
   <%= link_to "Back to restaurants", restaurants_path %>
+</div>
 </div>
